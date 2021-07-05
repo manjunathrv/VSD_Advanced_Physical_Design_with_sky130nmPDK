@@ -19,15 +19,16 @@ Table of contents
       * [Spice simulation of the VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#spice-simulation-of-the-vsd-cmos-inverter-cell)
    	
    * [Day 4](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-4)
-      * [Verification of Gate level Synthesized (GLS) netlist ](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-verification-of-gate-level-synthesized-gls-netlist-)
-      * [Lab Session 1 GLS Synthesis simulation mismatch](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#2-lab-1-gls-synthesis-simulation-mismatch-)
+      * [Extracting LEF file from the VSD Standard inverter cell](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-verification-of-gate-level-synthesized-gls-netlist-)
+      * [Timing analysis using OPENSTA](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#2-lab-1-gls-synthesis-simulation-mismatch-)
+      * [Clock Tree synthesis](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#2-lab-1-gls-synthesis-simulation-mismatch-)
  
    * [Day 5](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-5)
-      * [If - Else statement](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-if---else-statement)
-      * [Case structure](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#2-case-structure)
-      * [Lab Session 1 Incomplete If-Else statement](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#4-lab-session-1-incomplete-if-else-statement)
-      * [Lab Session 2 Incomplete Case statement](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#4-lab-session-2-incomplete-case-statement)
-   * [Acknowledgement](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#acknowledgement)
+      * [Power Distribution Network](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-if---else-statement)
+      * [Placement](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-if---else-statement)
+      * [Routing](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-if---else-statement)
+
+   * [Acknowledgement](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#acknowledgement)
 
 <!--te-->
 
@@ -232,7 +233,7 @@ From the CMOS Output waverform, the calculation of rise transisiton time that is
 
 <img src="Images/Day_3_1p.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1o_rise.PNG" width="100"> <br/> 
+<img src="Images/Day_3_1o_rise.PNG" width="200"> <br/> 
 
 The rise transisiton time obtained is 32ps  <br/> 
 
@@ -242,7 +243,7 @@ Similarly, the falling transition time is obtained with the time taken to go fro
 
 <img src="Images/Day_3_1q_fall_2.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_fall_calc.PNG" width="100"> <br/> 
+<img src="Images/Day_3_1q_fall_calc.PNG" width="200"> <br/> 
 
 The falling transition time obtained is 26ps  <br/> 
 
@@ -252,7 +253,7 @@ The rise cell delay is the time between the midpoint of the falling of the input
 
 <img src="Images/Day_3_1q_delay_rise_1.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_delay_rise_2.PNG" width="100"> <br/> 
+<img src="Images/Day_3_1q_delay_rise_2.PNG" width="200"> <br/> 
 
 The rise cell delay obtained is 27ps  <br/>
 
@@ -260,7 +261,7 @@ The fall cell delay is the time between the midpoint of the rising of the input 
 
 <img src="Images/Day_3_1q_fall_delay.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_fall_delay_2.PNG" width="100"> <br/> 
+<img src="Images/Day_3_1q_fall_delay_2.PNG" width="200"> <br/> 
 
 The fall cell delay obtained is 29ps  <br/>
 
@@ -296,18 +297,33 @@ The port pins and directions are checked in the LEF file as below,
 
 <img src="Images/Day_4_1g.PNG" width="600"> <br/> 
 
-## Timing analysis using OPENSTA
+The generated new lef file from the VSD standard inverter cell are included in the config flow to check if the generated netlist has the vsd_std_inv cell added to picorv32a RTL to GDS flow. <br/>  
 
-The generated new lef file from the VSD standard inverter cell are included in the config flow for full RTL2GDS flow of picorv32a design. <br/>  
+The config file is modified as below to add the vsd standard inverter cell lef file. <br/> 
+
+<img src="Images/Day_4_1j.PNG" width="600"> <br/> 
+
+The design prep and synthesis are done in OpenLANE as follows, <br/> 
+
+<img src="Images/Day_4_1k.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1l.PNG" width="400"> <br/> 
+
+After synthesis, the report generated for the netlist includes the VSD standard inverter cell as shown below, 
+
+
+## Timing analysis using OPENSTA
 
 The two files needed for checking in OpenSTA are my_base.sdc and pre_sta_conf as below, <br/> 
 
-<img src="Images/Day_4_1i_correct_config.PNG" width="400"> <br/> 
+<img src="Images/Day_4_1i_correct_config.PNG" width="600"> <br/> 
 
-<img src="Images/Day_4_1i_pre_sta_conf.PNG" width="400"> <br/> 
+<img src="Images/Day_4_1i_pre_sta_conf.PNG" width="600"> <br/> 
 
 Next 
 
+
+## Clock Tree synthesis
 
 <img src="Images/Day_4_1k.PNG" width="400"> <br/> 
 
@@ -334,7 +350,7 @@ Next
 
 
 # Day 5 
-
+The complete command used for RTL to GDS flow of the project picorv32a using vsd standard inverter cell is given below, 
 
 ```console
 %run_synthesis
@@ -348,22 +364,7 @@ Next
 %run_synthesis
 
 ```
-
-1. 
-
-2. 
-
-3.
-
-4.
-
-5. 
-
-6.tap_decap_or detailed_placement
-
-7.gen_pdn
-
-8.run_routing
+The layout checks from the floorplan, placement and routing stage as shown in the next sections. 
 
 ## Floorplan
 
@@ -407,8 +408,7 @@ Next
 
 <img src="Images/Day_5_1_routing_f.PNG" width="400"> <br/>
 
-
-
+## GDS II generation 
 
 
 

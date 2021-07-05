@@ -37,18 +37,34 @@ The physical design flow in ASIC development process is shown in the below figur
 
 <img src="Images/Day_1_Fig_1.PNG" width="600"> <br/> 
 
+A brief description of each step is given in the below points, 
+1. Synthesis - In this step the RTL design is converted into gate level netlist. 
+2. Floorplan - The planning of the macros and the power distribution network on the given silicon area are done.
+3. Placement - The standard cells are placed on the rows of the floorplan. 
+4. Clock tree synthesis - The clock network is defined in the chip. The network is optimisied to enable reduction in skew across the chip. 
+5. Routing - The interconnects between the cells in the chip are done. 
+6. Sign-off - The physical verification of the layout before generation of the GDSII file for tape out.
+
 
 ## Introduction to Openlane flow
-The openlane used for the process of RTL to GDS is shown in the below figure, <br/> 
+OpenLANE is a set of tools to enable all the functionalities from RTL to GDS II in the ASIC development process. <br/> 
+The set of tools used for each steps are described in the below figure, <br/> 
 
 <img src="Images/Day_1_Fig_2.PNG" width="800"> <br/> 
 
-
 ## Openlane directory structure
+
+In this workshop, the necessary tools are installed in the server by following the steps in the link : https://github.com/The-OpenROAD-Project/OpenLane <br/> 
+
+The directories present in openlane_working directory are openlane and PDKS <br/> 
 
 <img src="Images/Day_1_1a.PNG" width="600"> <br/>
 
+The PDKs that are present in this folder are skywater-pdk(foundry PDK), sky130A(Open-source PDK).  
+
 <img src="Images/Day_1_1a1.PNG" width="600"> <br/>
+
+The technology library files are present in libs.tech folder. 
 
 <img src="Images/Day_1_1b.PNG" width="600"> <br/>
 
@@ -60,6 +76,9 @@ The openlane used for the process of RTL to GDS is shown in the below figure, <b
 # Day 2
 
 ## Design prepartion and synthesis flow
+In this workshop, the project picorv32a is used as an example to learn the complete RTL to GDSII flow.<br/>
+The project picorv32a is found in the design folder. <br/>
+
 
 <img src="Images/Day_1_1e.PNG" width="600"> <br/>
 

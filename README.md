@@ -16,7 +16,9 @@ Table of contents
       * [Lab Session 2 - Flip-Flop implementation and synthesis](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#3-lab-session-2---flip-flop-implementation-and-synthesis)
     
    * [Day 3](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#day-3)
-      * [Introduction to optimisation](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-introduction-to-optimisation-)
+      * [VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-introduction-to-optimisation-)
+      * [Spice simulation of the VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#spice-simulation-of-the-vsd-cmos-inverter-cell)
+
    	
    * [Day 4](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#day-4)
       * [Verification of Gate level Synthesized (GLS) netlist ](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-verification-of-gate-level-synthesized-gls-netlist-)
@@ -113,12 +115,41 @@ For dynamic simulation, the netlist is modified as below, <br/>
 <img src="Images/Day_3_1j.PNG" width="400"> <br/> 
 
 Next, the spice simulation is done in ngspice by the following commands.<br/> 
+
 <img src="Images/Day_3_1k.PNG" width="400"> <br/> 
 
 <img src="Images/Day_3_1l.PNG" width="400"> <br/> 
 
 The output waveform of the VSD CMOS inverter is shown below, <br/> 
+
 <img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+
+From the CMOS Output waverform, the calculation of rise slew time taken to go from 20% to 80% of the Vout(y) as shown below,  <br/> 
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+
+The rise slew time obtained is ps  <br/> 
+
+Similarly, the falling slew time is obtained with the time taken to go from 20% to 80% of the Vout(y) as shown below as shown below,  <br/> 
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+
+The fall slew time obtained is ps  <br/> 
+
+In the next step, the rise time and the fall time is calculated. <br/>
+The rise taken with the midpoint of the Vin(a) and Vout(y) <br/> 
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+The fall slew time obtained is ps  <br/>
+
+The fall taken with the midpoint of the Vin(a) and Vout(y) <br/> 
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+The fall slew time obtained is ps  <br/>
+
+
 
 
 

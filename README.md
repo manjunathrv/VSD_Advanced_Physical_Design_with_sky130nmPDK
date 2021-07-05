@@ -38,23 +38,55 @@ Table of contents
 ## Introduction to Physical Design flow
 The physical design flow in ASIC development process is shown in the below figure, <br/> 
 
-<img src="Images/Day_1_Fig_1.PNG" width="800"> <br/> 
-
-
+<img src="Images/Day_1_Fig_1.PNG" width="600"> <br/> 
 
 
 ## Introduction to Openlane flow
 The openlane used for the process of RTL to GDS is shown in the below figure, <br/> 
 
-<img src="Images/Day_3_Fig.PNG" width="200"> <br/> 
+<img src="Images/Day_1_Fig_2.PNG" width="800"> <br/> 
 
 
 ## Openlane directory structure
 
+<img src="Images/Day_1_1a.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_1a1.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_1b.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_1c.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_1d.PNG" width="600"> <br/>
 
 
 ## Design prepartion and synthesis flow
 
+<img src="Images/Day_1_1e.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_1f.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_3a.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_4a.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_4b.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_4c.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_4d.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_4e.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_4f.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_5f.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_5e.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_5g.PNG" width="600"> <br/>
+
+<img src="Images/Day_1_5h.PNG" width="600"> <br/>
 
 
 # Day 2

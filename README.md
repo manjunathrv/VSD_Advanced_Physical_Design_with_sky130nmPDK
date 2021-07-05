@@ -224,25 +224,25 @@ Next, the spice simulation is done in ngspice by the following commands.<br/>
 
 The output waveform of the VSD CMOS inverter is shown below, <br/> 
 
-<img src="Images/Day_3_1m.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
 
 From the CMOS Output waverform, the calculation of rise transisiton time that is the time taken to go from 20% (0.66V)  to 80% (2.64V) of the Vout(y) is calculated as shown below,  <br/> 
 
-<img src="Images/Day_3_1n.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1n.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1p.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1p.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1o_rise.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1o_rise.PNG" width="100"> <br/> 
 
 The rise transisiton time obtained is 32ps  <br/> 
 
 Similarly, the falling transition time is obtained with the time taken to go from 80% to 20% of the Vout(y) as shown below as shown below,  <br/> 
 
-<img src="Images/Day_3_1q_fall_1.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1q_fall_1.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_fall_2.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1q_fall_2.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_fall_calc.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1q_fall_calc.PNG" width="100"> <br/> 
 
 The falling transition time obtained is 26ps  <br/> 
 
@@ -250,30 +250,35 @@ In the next step, the rise cell delay and the fall cell delay is calculated. <br
 
 The rise cell delay is the time between the midpoint of the falling of the input Vin(a) and rising output Vout(y) <br/> 
 
-<img src="Images/Day_3_1q_delay_rise_1.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1q_delay_rise_1.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_delay_rise_2.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1q_delay_rise_2.PNG" width="100"> <br/> 
 
 The rise cell delay obtained is 27ps  <br/>
 
 The fall cell delay is the time between the midpoint of the rising of the input Vin(a) and falling of the output Vout(y) <br/> 
 
-<img src="Images/Day_3_1q_fall_delay.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1q_fall_delay.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_fall_delay_2.PNG" width="600"> <br/> 
+<img src="Images/Day_3_1q_fall_delay_2.PNG" width="100"> <br/> 
 
 The fall cell delay obtained is 29ps  <br/>
 
 # Day 4 
 
-## Introduction to Physical Design flow
-## Introduction to Openlane flow
-## Openlane directory structure
-## Design prepartion and synthesis flow
+In the next two days, the objective is to insert the characterised VSD standard inverter cell into the picorv32a design. <br/>
 
-<img src="Images/Day_4_1a.PNG" width="400"> <br/> 
+## Extracting LEF file from the VSD Standard inverter cell
 
-<img src="Images/Day_4_1b.PNG" width="400"> <br/> 
+The LEF is extracted file from the spice .mag file in Magic. <br/>
+
+The change of grid in Magic is done by below command in the console window, <br/>
+
+<img src="Images/Day_4_1b.PNG" width="600"> <br/> 
+
+<img src="Images/Day_4_1a.PNG" width="600"> <br/> 
+
+Next, the ports of the input (A) and output (Y) are checked to be in the intersection of the tracks both vertically and horizontally.  <br/>
 
 <img src="Images/Day_4_1c.PNG" width="400"> <br/> 
 
@@ -281,15 +286,28 @@ The fall cell delay obtained is 29ps  <br/>
 
 <img src="Images/Day_4_1e.PNG" width="400"> <br/> 
 
-<img src="Images/Day_4_1f.PNG" width="400"> <br/> 
+The LEF file is extracted by the below command, <br/> 
+```console
+%lef write
+```
+<img src="Images/Day_4_1f.PNG" width="600"> <br/> 
 
-<img src="Images/Day_4_1g.PNG" width="400"> <br/> 
+The port pins and directions are checked in the LEF file as below, 
 
-<img src="Images/Day_4_1f.PNG" width="400"> <br/> 
+<img src="Images/Day_4_1g.PNG" width="600"> <br/> 
+
+## Timing analysis using OPENSTA
+
+The generated new lef file from the VSD standard inverter cell are included in the config flow for full RTL2GDS flow of picorv32a design. <br/>  
+
+The two files needed for checking in OpenSTA are my_base.sdc and pre_sta_conf as below, <br/> 
 
 <img src="Images/Day_4_1i_correct_config.PNG" width="400"> <br/> 
 
 <img src="Images/Day_4_1i_pre_sta_conf.PNG" width="400"> <br/> 
+
+Next 
+
 
 <img src="Images/Day_4_1k.PNG" width="400"> <br/> 
 
@@ -316,6 +334,36 @@ The fall cell delay obtained is 29ps  <br/>
 
 
 # Day 5 
+
+
+```console
+%run_synthesis
+%init_floorplan
+%place_io
+%global_placement_or
+%detailed_placement
+%run_synthesis
+%run_synthesis
+%run_synthesis
+%run_synthesis
+
+```
+
+1. 
+
+2. 
+
+3.
+
+4.
+
+5. 
+
+6.tap_decap_or detailed_placement
+
+7.gen_pdn
+
+8.run_routing
 
 ## Floorplan
 

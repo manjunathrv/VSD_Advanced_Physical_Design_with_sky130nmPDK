@@ -213,42 +213,56 @@ The output spice netlist from the CMOS inverter layout is shown below, <br/>
 <img src="Images/Day_3_1i.PNG" width="600"> <br/> 
 
 For dynamic simulation, the netlist is modified as below, <br/>
+
 <img src="Images/Day_3_1j.PNG" width="600"> <br/> 
 
 Next, the spice simulation is done in ngspice by the following commands.<br/> 
 
-<img src="Images/Day_3_1k.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1k.PNG" width="600"> <br/> 
 
-<img src="Images/Day_3_1l.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1l.PNG" width="600"> <br/> 
 
 The output waveform of the VSD CMOS inverter is shown below, <br/> 
 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1m.PNG" width="600"> <br/> 
 
-From the CMOS Output waverform, the calculation of rise slew time taken to go from 20% to 80% of the Vout(y) as shown below,  <br/> 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+From the CMOS Output waverform, the calculation of rise transisiton time that is the time taken to go from 20% (0.66V)  to 80% (2.64V) of the Vout(y) is calculated as shown below,  <br/> 
 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1n.PNG" width="600"> <br/> 
 
-The rise slew time obtained is ps  <br/> 
+<img src="Images/Day_3_1p.PNG" width="600"> <br/> 
 
-Similarly, the falling slew time is obtained with the time taken to go from 20% to 80% of the Vout(y) as shown below as shown below,  <br/> 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1o_rise.PNG" width="600"> <br/> 
 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
+The rise transisiton time obtained is 32ps  <br/> 
 
-The fall slew time obtained is ps  <br/> 
+Similarly, the falling transition time is obtained with the time taken to go from 80% to 20% of the Vout(y) as shown below as shown below,  <br/> 
 
-In the next step, the rise time and the fall time is calculated. <br/>
-The rise taken with the midpoint of the Vin(a) and Vout(y) <br/> 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
-The fall slew time obtained is ps  <br/>
+<img src="Images/Day_3_1q_fall_1.PNG" width="600"> <br/> 
 
-The fall taken with the midpoint of the Vin(a) and Vout(y) <br/> 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
-<img src="Images/Day_3_1m.PNG" width="400"> <br/> 
-The fall slew time obtained is ps  <br/>
+<img src="Images/Day_3_1q_fall_2.PNG" width="600"> <br/> 
+
+<img src="Images/Day_3_1q_fall_calc.PNG" width="600"> <br/> 
+
+The falling transition time obtained is 26ps  <br/> 
+
+In the next step, the rise cell delay and the fall cell delay is calculated. <br/>
+
+The rise cell delay is the time between the midpoint of the falling of the input Vin(a) and rising output Vout(y) <br/> 
+
+<img src="Images/Day_3_1q_delay_rise_1.PNG" width="600"> <br/> 
+
+<img src="Images/Day_3_1q_delay_rise_2.PNG" width="600"> <br/> 
+
+The rise cell delay obtained is 27ps  <br/>
+
+The fall cell delay is the time between the midpoint of the rising of the input Vin(a) and falling of the output Vout(y) <br/> 
+
+<img src="Images/Day_3_1q_fall_delay.PNG" width="600"> <br/> 
+
+<img src="Images/Day_3_1q_fall_delay_2.PNG" width="600"> <br/> 
+
+The fall cell delay obtained is 29ps  <br/>
 
 # Day 4 
 

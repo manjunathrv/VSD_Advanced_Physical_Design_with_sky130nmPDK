@@ -93,7 +93,7 @@ The openlane used for the process of RTL to GDS is shown in the below figure, <b
 
 <img src="Images/Day_1_5f.PNG" width="600"> <br/>
 
-<img src="Images/Day_3_first_reset_IO" width="600"> <br/>
+<img src="Images/Day_3_first_reset_IO.PNG" width="600"> <br/>
 
 <img src="Images/Day_3_first_reset_IO_2.PNG" width="600"> <br/>
 
@@ -204,13 +204,120 @@ The fall slew time obtained is ps  <br/>
 ## Openlane directory structure
 ## Design prepartion and synthesis flow
 
+<img src="Images/Day_4_1a.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1b.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1c.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1d.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1e.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1f.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1g.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1f.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1i_correct_config.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1i_pre_sta_conf.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1k.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1l.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1m.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1n.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_1o.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_2_1.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_2_1a.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_2_1b.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_2_1c.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_3_a.PNG" width="400"> <br/> 
+
+<img src="Images/Day_4_3_b.PNG" width="400"> <br/> 
+
+
+
 # Day 5 
 
+## Floorplan
 
-## Introduction to Physical Design flow
-## Introduction to Openlane flow
-## Openlane directory structure
-## Design prepartion and synthesis flow
+<img src="Images/Day_5_1_a.PNG" width="400"> <br/> 
+
+<img src="Images/Day_5_1_b.PNG" width="400"> <br/> 
+
+<img src="Images/Day_5_1_c.PNG" width="400"> <br/> 
+
+<img src="Images/Day_5_1_c.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_d_floorplan.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_d_floorplan_vsd.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_d_floorplan_vsd_2.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_d_floorplan_vsd_3.PNG" width="400"> <br/>
+
+## Placement
+
+<img src="Images/Day_5_1_d_placement_1.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_d_placement_1b.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_d_placement_1c.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_d_placement_1d.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_d_placement_a.PNG" width="400"> <br/>
+
+## Routing
+
+<img src="Images/Day_5_1_d_routing.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_routing_b.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_routing_c.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_routing_e.PNG" width="400"> <br/>
+
+<img src="Images/Day_5_1_routing_f.PNG" width="400"> <br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

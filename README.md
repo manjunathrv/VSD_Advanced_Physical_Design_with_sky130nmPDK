@@ -11,6 +11,7 @@ Table of contents
       * [Openlane directory structure](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#openlane-directory-structure)
    * [Day 2](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-2)
       * [Design prepartion and synthesis flow](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#design-prepartion-and-synthesis-flow)
+      * [Floorplan](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#design-prepartion-and-synthesis-flow)
    
    * [Day 3](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-3)
       * [IO placement modification](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#vsd-cmos-inverter-cell)
@@ -104,7 +105,7 @@ The OpenLane shell is started. Next the design of the picorv32a project is prepa
 
 <img src="Images/Day_1_4b.PNG" width="600"> <br/>
 
-Next the synthesis step is done to generate the gate-level netlist. 
+Next the synthesis step is done to generate the gate-level netlist. This script invokes yosys and ABC. 
 
 ```console
 %run_synthesis
@@ -118,6 +119,8 @@ From the statistics report, the D-flip flop ratio is calculated to be 8.9%
 <img src="Images/Day_1_4e.PNG" width="600"> <br/>
 
 <img src="Images/Day_1_4f.PNG" width="600"> <br/>
+
+## Floorplan
 
 Next, the floorplan of the picorv32a is done by executing the following command. <br/>
 
@@ -138,9 +141,14 @@ Some of the cells that we see in the layout are decap cells, tap cells and the m
 
 # Day 3 
 
-## IO placement modification
+## IO placement modification. 
+In this step, the changes in the environment variables for IO placement are observed. <br/>
+The IO pins are placed at equidistance by setting the enviroment variable FP_IO_mode as 1 in the configuration file. <br/>
+The IO pins that are blue in colour across the chip are shown in the below figure,<br/>
 
 <img src="Images/Day_1_5f.PNG" width="600"> <br/>
+
+Inorder to have the IO pins at non-equidistance the environment variable FP_IO_mode is set to 2 and the output obtained is seen in Magic as shown below,  <br/>
 
 <img src="Images/Day_3_first_reset_IO.PNG" width="600"> <br/>
 

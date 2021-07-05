@@ -78,27 +78,57 @@ The technology library files are present in libs.tech folder.
 ## Design prepartion and synthesis flow
 In this workshop, the project picorv32a is used as an example to learn the complete RTL to GDSII flow.<br/>
 The project picorv32a is found in the design folder. <br/>
-
+The folder structure consists of source folder(src) - having the verilog file and sdc file, configuration file (config.tcl) and results folder(runs) <br/>
 
 <img src="Images/Day_1_1e.PNG" width="600"> <br/>
 
+The configuration file consists of various environment variables and paths to source files.<br/>
+
 <img src="Images/Day_1_1f.PNG" width="600"> <br/>
+
+OpenLane is started by invoking the following commands - First run docker and open OpenLane
+
+```console
+make mount
+./flow.tcl -interactive
+```
 
 <img src="Images/Day_1_3a.PNG" width="600"> <br/>
 
+The OpenLane shell is started. Next the design of the picorv32a project is prepared by using the following commands. <br/>
+
+```console
+%prep -design picorv32a
+```
 <img src="Images/Day_1_4a.PNG" width="600"> <br/>
 
 <img src="Images/Day_1_4b.PNG" width="600"> <br/>
 
+Next the synthesis step is done to generate the gate-level netlist. 
+
+```console
+%run_synthesis
+```
 <img src="Images/Day_1_4c.PNG" width="600"> <br/>
 
 <img src="Images/Day_1_4d.PNG" width="600"> <br/>
+
+From the statistics report, the D-flip flop ratio is calculated to be 8.9%
 
 <img src="Images/Day_1_4e.PNG" width="600"> <br/>
 
 <img src="Images/Day_1_4f.PNG" width="600"> <br/>
 
+Next, the floorplan of the picorv32a is done by executing the following command. <br/>
+
+```console
+%run_floorplan
+```
+The layout after floorplan is checked in Magic layout editor as shown below, 
+
 <img src="Images/Day_1_5f.PNG" width="600"> <br/>
+
+Some of the cells that we see in the layout are decap cells, tap cells and the macro cells. <br/>
 
 <img src="Images/Day_1_5e.PNG" width="600"> <br/>
 

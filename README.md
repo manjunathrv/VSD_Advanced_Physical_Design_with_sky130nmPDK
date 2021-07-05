@@ -13,9 +13,9 @@ Table of contents
       * [Design prepartion and synthesis flow](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#design-prepartion-and-synthesis-flow)
    
    * [Day 3](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-3)
+      * [IO placement modification](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#vsd-cmos-inverter-cell)
       * [VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#vsd-cmos-inverter-cell)
       * [Spice simulation of the VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#spice-simulation-of-the-vsd-cmos-inverter-cell)
-
    	
    * [Day 4](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-4)
       * [Verification of Gate level Synthesized (GLS) netlist ](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-verification-of-gate-level-synthesized-gls-netlist-)
@@ -57,7 +57,6 @@ The openlane used for the process of RTL to GDS is shown in the below figure, <b
 <img src="Images/Day_1_1d.PNG" width="600"> <br/>
 
 
-
 # Day 2
 
 ## Design prepartion and synthesis flow
@@ -88,9 +87,16 @@ The openlane used for the process of RTL to GDS is shown in the below figure, <b
 
 <img src="Images/Day_1_5h.PNG" width="600"> <br/>
 
-
-
 # Day 3 
+
+## IO placement modification
+
+<img src="Images/Day_1_5f.PNG" width="600"> <br/>
+
+<img src="Images/Day_3_first_reset_IO" width="600"> <br/>
+
+<img src="Images/Day_3_first_reset_IO_2.PNG" width="600"> <br/>
+
 
 ## VSD CMOS Inverter Cell
 
@@ -102,7 +108,6 @@ The input to the CMOS inverter is labelled as A and the output is Y.<br/>
 The VSD CMOS inverter cell for the lab is taken from the github link <br/>
 
 The CMOS inverter is checked in Magic layout editor using the following commands. <br/>
-
 
 The image in Magic Layout editor can be centered by pressing v and the top cell is shown by pressing s.<br/> 
 
@@ -192,20 +197,6 @@ The fall taken with the midpoint of the Vin(a) and Vout(y) <br/>
 <img src="Images/Day_3_1m.PNG" width="400"> <br/> 
 The fall slew time obtained is ps  <br/>
 
-
-
-
-
-
-
-
-
-
-
-## Introduction to Openlane flow
-## Openlane directory structure
-## Design prepartion and synthesis flow
-
 # Day 4 
 
 ## Introduction to Physical Design flow
@@ -214,6 +205,7 @@ The fall slew time obtained is ps  <br/>
 ## Design prepartion and synthesis flow
 
 # Day 5 
+
 
 ## Introduction to Physical Design flow
 ## Introduction to Openlane flow

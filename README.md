@@ -16,7 +16,7 @@ Table of contents
       * [Lab Session 2 - Flip-Flop implementation and synthesis](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#3-lab-session-2---flip-flop-implementation-and-synthesis)
     
    * [Day 3](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#day-3)
-      * [VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-introduction-to-optimisation-)
+      * [VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#vsd-cmos-inverter-cell)
       * [Spice simulation of the VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#spice-simulation-of-the-vsd-cmos-inverter-cell)
 
    	
@@ -36,9 +36,26 @@ Table of contents
 # Day 1 
 
 ## Introduction to Physical Design flow
+The physical design flow in ASIC development process is shown in the below figure, <br/> 
+
+<img src="Images/Day_1_Fig_1.PNG" width="800"> <br/> 
+
+
+
+
 ## Introduction to Openlane flow
+The openlane used for the process of RTL to GDS is shown in the below figure, <br/> 
+
+<img src="Images/Day_3_Fig.PNG" width="200"> <br/> 
+
+
 ## Openlane directory structure
+
+
+
 ## Design prepartion and synthesis flow
+
+
 
 # Day 2
 
@@ -109,10 +126,10 @@ The spice netlist obtained from magic tool is done by using the commands extract
 
 The output spice netlist from the CMOS inverter layout is shown below, <br/> 
 
-<img src="Images/Day_3_1i.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1i.PNG" width="600"> <br/> 
 
 For dynamic simulation, the netlist is modified as below, <br/>
-<img src="Images/Day_3_1j.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1j.PNG" width="600"> <br/> 
 
 Next, the spice simulation is done in ngspice by the following commands.<br/> 
 

@@ -9,12 +9,9 @@ Table of contents
       * [Introduction to Physical Design flow](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#introduction-to-physical-design-flow)
       * [Introduction to Openlane flow](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#introduction-to-openlane-flow)
       * [Openlane directory structure](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#openlane-directory-structure)
-      * [Design prepartion and synthesis flow](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#design-prepartion-and-synthesis-flow)
    * [Day 2](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-2)
-      * [Introduction to technology library file](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#1-introduction-to-technology-library-file)
-      * [Lab Session 1 - Hierachal and Flatten synthesis](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#2-lab-session-1---hierachal-and-flatten-synthesis)
-      * [Lab Session 2 - Flip-Flop implementation and synthesis](https://github.com/manjunathrv/VSD_RTL_Design_using_sky130nmPDK_workshop#3-lab-session-2---flip-flop-implementation-and-synthesis)
-    
+      * [Design prepartion and synthesis flow](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#design-prepartion-and-synthesis-flow)
+   
    * [Day 3](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-3)
       * [VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#vsd-cmos-inverter-cell)
       * [Spice simulation of the VSD CMOS Inverter Cell](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#spice-simulation-of-the-vsd-cmos-inverter-cell)
@@ -60,6 +57,9 @@ The openlane used for the process of RTL to GDS is shown in the below figure, <b
 <img src="Images/Day_1_1d.PNG" width="600"> <br/>
 
 
+
+# Day 2
+
 ## Design prepartion and synthesis flow
 
 <img src="Images/Day_1_1e.PNG" width="600"> <br/>
@@ -89,12 +89,6 @@ The openlane used for the process of RTL to GDS is shown in the below figure, <b
 <img src="Images/Day_1_5h.PNG" width="600"> <br/>
 
 
-# Day 2
-
-## Introduction to Physical Design flow
-## Introduction to Openlane flow
-## Openlane directory structure
-## Design prepartion and synthesis flow
 
 # Day 3 
 

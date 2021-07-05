@@ -50,7 +50,7 @@ Table of contents
 ## VSD CMOS Inverter Cell
 
 A schematic of a CMOS inverter is shown in the below figure. 
-<img src="Images/Day_3_Fig" width="600">
+<img src="Images/Day_3_Fig.PNG" width="600">
 The input to the CMOS inverter is labelled as A and the output is Y.<br/>
 
 The VSD CMOS inverter cell for the lab is taken from the github link <br/>
@@ -60,27 +60,27 @@ The CMOS inverter is checked in Magic layout editor using the following commands
 
 The image in Magic Layout editor can be centered by pressing v and the top cell is shown by pressing s.<br/> 
 The output obtained is shown below.
-<img src="Images/Day_3_1a" width="600">
+<img src="Images/Day_3_1a.PNG" width="600">
 The layer of N-well in the PMOS region can be found by moving the cursor close to the large box surrounding the PMOS layer and typing the command what in the tkon console window as shown below,
-<img src="Images/Day_3_1b" width="600">
+<img src="Images/Day_3_1b.PNG" width="600">
 
 Similarly, NMOS, PMOS and poly layers of the inverter are found as shown below, <br/> 
 NMOS
-<img src="Images/Day_3_1b" width="600">
+<img src="Images/Day_3_1b.PNG" width="600">
 PMOS
-<img src="Images/Day_3_1b" width="600">
+<img src="Images/Day_3_1b.PNG" width="600">
 poly
-<img src="Images/Day_3_1b" width="600">
+<img src="Images/Day_3_1b.PNG" width="600">
 
 ## Spice simulation of the VSD CMOS Inverter Cell
 ### Static simulation of the CMOS Inverter
 
 The circuit for the static simulation of the CMOS inverter is shown below, 
 
-<img src="Images/Day_3_Fig_1" width="600">
+<img src="Images/Day_3_Fig_1.PNG" width="600">
 
 The typical voltage transfer characteristices for the static simulation of the CMOS inverter is shown below, 
-<img src="Images/Day_3_Fig_2" width="600">
+<img src="Images/Day_3_Fig_2.PNG" width="600">
 
 
 

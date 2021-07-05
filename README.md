@@ -44,7 +44,7 @@ A brief description of each step is given in the below points,
 3. Placement - The standard cells are placed on the rows of the floorplan. 
 4. Clock tree synthesis - The clock network is defined in the chip. The network is optimisied to enable reduction in skew across the chip. 
 5. Routing - The interconnects between the cells in the chip are done. 
-6. Sign-off - The physical verification of the layout before generation of the GDSII file for tape out.
+6. Sign-off - The logical and physical verification of the layout are done in this step before generation of the GDSII file for tape out.
 
 
 ## Introduction to Openlane flow
@@ -185,7 +185,7 @@ Similarly, NMOS, PMOS and poly layers of the inverter are found as shown below, 
 
 <strong>PMOS</strong>
 
-<img src="Images/Day_3_1d.PNG" width="400"> <br/> 
+<img src="Images/Day_3_1f.PNG" width="400"> <br/> 
  
  <strong>poly</strong> 
  
@@ -203,10 +203,6 @@ The typical voltage transfer characteristices for the static simulation of the C
 <img src="Images/Day_3_Fig_3.PNG" width="400">
 
 ### Dynamic simulation of the CMOS Inverter
-
-The circuit for the dynamic simulation of the CMOS inverter is shown below, <br/> 
-
-<img src="Images/Day_3_Fig_2.PNG" width="400"> <br/> 
 
 The spice netlist obtained from magic tool is done by using the commands extract all, ext2spice thresh 0 rthresh 0, ext2spice as shown below, <br/> 
 

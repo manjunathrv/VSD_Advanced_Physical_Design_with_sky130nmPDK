@@ -430,9 +430,9 @@ In this worshop the following points were discussed,
 
 
 # Acknowledgements
-Kunal Ghosh - VSD India Pvt Ltd
-Mili Anand - Teach assistant
-Mansi Mohapatra - Teaching assistant
+Kunal Ghosh - VSD India Pvt Ltd <br/>
+Mili Anand - Teach assistant <br/>
+Mansi Mohapatra - Teaching assistant <br/>
 
 
 

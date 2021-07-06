@@ -3,7 +3,6 @@
 
 Table of contents
 =================
-
 <!--ts-->
    * [Day 1](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#day-1)
       * [Introduction to Physical Design flow](https://github.com/manjunathrv/VSD_Advanced_Physical_Design_with_sky130nmPDK#introduction-to-physical-design-flow)

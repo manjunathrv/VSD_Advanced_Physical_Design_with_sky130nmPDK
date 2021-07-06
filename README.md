@@ -233,7 +233,7 @@ From the CMOS Output waverform, the calculation of rise transisiton time that is
 
 <img src="Images/Day_3_1p.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1o_rise.PNG" width="200"> <br/> 
+<img src="Images/Day_3_1o_rise.PNG" width="300"> <br/> 
 
 The rise transisiton time obtained is 32ps  <br/> 
 
@@ -243,7 +243,7 @@ Similarly, the falling transition time is obtained with the time taken to go fro
 
 <img src="Images/Day_3_1q_fall_2.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_fall_calc.PNG" width="200"> <br/> 
+<img src="Images/Day_3_1q_fall_calc.PNG" width="300"> <br/> 
 
 The falling transition time obtained is 26ps  <br/> 
 
@@ -253,7 +253,7 @@ The rise cell delay is the time between the midpoint of the falling of the input
 
 <img src="Images/Day_3_1q_delay_rise_1.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_delay_rise_2.PNG" width="200"> <br/> 
+<img src="Images/Day_3_1q_delay_rise_2.PNG" width="300"> <br/> 
 
 The rise cell delay obtained is 27ps  <br/>
 
@@ -261,7 +261,7 @@ The fall cell delay is the time between the midpoint of the rising of the input 
 
 <img src="Images/Day_3_1q_fall_delay.PNG" width="400"> <br/> 
 
-<img src="Images/Day_3_1q_fall_delay_2.PNG" width="200"> <br/> 
+<img src="Images/Day_3_1q_fall_delay_2.PNG" width="300"> <br/> 
 
 The fall cell delay obtained is 29ps  <br/>
 
@@ -305,47 +305,59 @@ The config file is modified as below to add the vsd standard inverter cell lef f
 
 The design prep and synthesis are done in OpenLANE as follows, <br/> 
 
-<img src="Images/Day_4_1k.PNG" width="400"> <br/> 
+<img src="Images/Day_4_1k.PNG" width="600"> <br/> 
 
-<img src="Images/Day_4_1l.PNG" width="400"> <br/> 
+<img src="Images/Day_4_1l.PNG" width="600"> <br/> 
 
-After synthesis, the report generated for the netlist includes the VSD standard inverter cell as shown below, 
+After synthesis, the report generated for the netlist includes the VSD standard inverter cell as shown below, <br/>
+
+<img src="Images/Day_4_1m.PNG" width="600"> <br/> 
+
+This shows that the VSD standard cells is included in the final netlist generated. 
+
+## Floorplan with VSD Standard inverter cell
+
+Next, the floorplan of the project picorv32a is done. The obtained output seen in Magic are shown below <br/> 
+
+<img src="Images/Day_5_1_d_floorplan.PNG" width="600"> <br/> 
+
+<img src="Images/Day_5_1_d_floorplan_vsd.PNG" width="600"> <br/> 
+
+<img src="Images/Day_5_1_d_floorplan_vsd_2.PNG" width="600"> <br/>
+
+<img src="Images/Day_5_1_d_floorplan_vsd_3.PNG" width="600"> <br/>
+
+The VSD standard cells are included in the floorplan of the project. 
 
 
 ## Timing analysis using OPENSTA
 
-The two files needed for checking in OpenSTA are my_base.sdc and pre_sta_conf as below, <br/> 
+The two files needed for the timing analysis in OpenSTA are my_base.sdc and pre_sta_conf as below, <br/> 
 
 <img src="Images/Day_4_1i_correct_config.PNG" width="600"> <br/> 
 
 <img src="Images/Day_4_1i_pre_sta_conf.PNG" width="600"> <br/> 
 
-Next 
+Next, the synthesis and checking the output with OpenSTA are done. <br/>
+
+<img src="Images/Day_4_1n.PNG" width="600"> <br/> 
+
+It is seen that the slack obtained is negative. This can be optimised by using different cells in the generated netlist to obtain a positive slack. 
 
 
 ## Clock Tree synthesis
 
-<img src="Images/Day_4_1k.PNG" width="400"> <br/> 
+In the next step, the clock tree is built by using the command as below,
 
-<img src="Images/Day_4_1l.PNG" width="400"> <br/> 
+```console
+%run_cts
+```
+A def file after cts named picorv32a_cts.def file is created.<br/> 
+<img src="Images/Day_4_3_b.PNG" width="400"> <br/> 
 
-<img src="Images/Day_4_1m.PNG" width="400"> <br/> 
-
-<img src="Images/Day_4_1n.PNG" width="400"> <br/> 
-
-<img src="Images/Day_4_1o.PNG" width="400"> <br/> 
-
-<img src="Images/Day_4_2_1.PNG" width="400"> <br/> 
-
-<img src="Images/Day_4_2_1a.PNG" width="400"> <br/> 
-
-<img src="Images/Day_4_2_1b.PNG" width="400"> <br/> 
+Next, a database from the cts def file is created as pico_cts.db
 
 <img src="Images/Day_4_2_1c.PNG" width="400"> <br/> 
-
-<img src="Images/Day_4_3_a.PNG" width="400"> <br/> 
-
-<img src="Images/Day_4_3_b.PNG" width="400"> <br/> 
 
 
 
@@ -358,15 +370,14 @@ The complete command used for RTL to GDS flow of the project picorv32a using vsd
 %place_io
 %global_placement_or
 %detailed_placement
-%run_synthesis
-%run_synthesis
-%run_synthesis
-%run_synthesis
-
+%tap_decap_or
+%detailed_placement
+%gen_pdn
+%run_routing
 ```
-The layout checks from the floorplan, placement and routing stage as shown in the next sections. 
+The layout checks from the placement and routing stage as shown in the next sections. 
 
-## Floorplan
+## Placement
 
 <img src="Images/Day_5_1_a.PNG" width="400"> <br/> 
 
